@@ -72,7 +72,7 @@ import com.globant.university.Read;
 	        }
 	        if (e.getSource()==mi3) {
 	        	int search=0;
-	        	int id=insertS.Size()+1;
+	        	int id=insertS.sizes()+1;
 	        	readStudent(id);
 	        	insertC.SubMenu(search, id);
 	        	
@@ -88,11 +88,11 @@ import com.globant.university.Read;
 	        if (e.getSource()==mi6) {
 	        	System.out.println("Name Class:");
 	        	String name=Read.ReadString();
-	        	int idStudent=insertS.Size()+1;
-	        	int idTeacher=insertT.Size()+1;
+	        	int idStudent=insertS.sizes()+1;
+	        	int idTeacher=insertT.sizes()+1;
 	        	System.out.println("Classroom:");
 	        	String classroom=Read.ReadString();
-	        	String id=Integer.toString(insertC.Size()+1);
+	        	String id=Integer.toString(insertC.sizes()+1);
 	        	System.out.println("Name Teacher:");
 	        	String nameT=Read.ReadString();
 	        	InsertTeachers.SubMenu(nameT, idTeacher);
@@ -101,7 +101,7 @@ import com.globant.university.Read;
 	        	for (int i=0; i<number; i++) {
 	        		readStudent(idStudent);
 	        		InsertClasses.createClass(name, idStudent, idTeacher, classroom, id);
-	        		idStudent=insertS.Size()+1;
+	        		idStudent=insertS.sizes()+1;
 	        	}
 	        }
 	        if (e.getSource()==mi7) {
@@ -116,11 +116,11 @@ import com.globant.university.Read;
 	    
 	    public void initialize() {
 	    	insertT = new InsertTeachers();
-	    	insertT.Insertar();
+	    	insertT.insertar();
 	    	insertS = new InsertStudent();
-			insertS.Insertar();
+			insertS.insertar();
 			insertC = new InsertClasses();
-	    	insertC.Insertar();
+	    	insertC.insertar();
 	    }
 	    
 	    public void readStudent(int id) {

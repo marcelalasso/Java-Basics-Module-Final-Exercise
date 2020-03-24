@@ -8,7 +8,7 @@ public class InsertStudent implements University{
 	static List<Student> students = new ArrayList<Student>();		
 	
 	@Override
-	public void Insertar() {
+	public void insertar() {
 		// TODO Auto-generated method stub
 		
 			Student student1 = new Student("Ana Caro", 1, 20);
@@ -53,7 +53,7 @@ public class InsertStudent implements University{
 			
 		}		
 	@Override
-	public int Size(){
+	public int sizes(){
 		int id=students.size();
 		return id;
 	}

@@ -13,7 +13,7 @@ public class InsertClasses implements University{
 	static List<Classes> classes = new ArrayList<Classes>();	
 
 	@Override
-	public void Insertar() {
+	public void insertar() {
 		// TODO Auto-generated method stub
 
 			Classes clase1 = new Classes("Mat", 1, 1, "005","1");
@@ -147,8 +147,17 @@ public class InsertClasses implements University{
 	}
 	
 	@Override
-	public int Size(){
-		int id=classes.size();
+	public int sizes(){
+		String classe="";
+		int id=0;
+		Collections.sort(classes, new Order());
+		for (int i=0; i<classes.size(); i++) {
+			Classes temp=classes.get(i);
+			if (temp.getName() != classe) {
+				classe=temp.getName();
+				id=id+1;
+			}
+		}
 		return id;
 	}
 	

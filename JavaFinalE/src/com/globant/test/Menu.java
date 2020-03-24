@@ -41,7 +41,7 @@ public class Menu {
 	            case "3":
 	                System.out.println("Insert Student");
 	            	search=0;
-	            	idStudent=insertS.Size()+1;
+	            	idStudent=insertS.sizes()+1;
 	            	readStudent(idStudent);
 	            	insertC.SubMenu(search, idStudent);
 	                break;
@@ -59,11 +59,11 @@ public class Menu {
 	                System.out.println("Insert Class");
 	            	System.out.println("Name Class:");
 	            	String name=Read.ReadString();
-	            	idStudent=insertS.Size()+1;
-	            	int idTeacher=insertT.Size()+1;
+	            	idStudent=insertS.sizes()+1;
+	            	int idTeacher=insertT.sizes()+1;
 	            	System.out.println("Classroom:");
 	            	String classroom=Read.ReadString();
-	            	String id=Integer.toString(insertC.Size()+1);
+	            	String id=Integer.toString(insertC.sizes()+1);
 	            	System.out.println("Name Teacher:");
 	            	String nameT=Read.ReadString();
 	            	InsertTeachers.SubMenu(nameT, idTeacher);
@@ -72,7 +72,7 @@ public class Menu {
 	            	for (int i=0; i<number; i++) {
 	            		readStudent(idStudent);
 	            		InsertClasses.createClass(name, idStudent, idTeacher, classroom, id);
-	            		idStudent=insertS.Size()+1;
+	            		idStudent=insertS.sizes()+1;
 	            	}
 	                break;
 	            case "7":
@@ -92,11 +92,11 @@ public class Menu {
 	
 	public static void initialize() {
 		insertT = new InsertTeachers();
-		insertT.Insertar();
+		insertT.insertar();
 		insertS = new InsertStudent();
-		insertS.Insertar();
+		insertS.insertar();
 		insertC = new InsertClasses();
-		insertC.Insertar();
+		insertC.insertar();
 	}
 
 	public static void readStudent(int id) {

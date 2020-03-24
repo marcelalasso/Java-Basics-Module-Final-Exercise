@@ -9,9 +9,9 @@ package com.globant.university;
  */
 public interface University {
 
-	public void Insertar();
+	public void insertar();
 	
 	public void printPeople();
 
-	public int Size();
+	public int sizes();
 }

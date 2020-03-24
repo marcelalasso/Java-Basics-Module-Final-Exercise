@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class InsertTeachers implements University{
 	static List<Teacher> teachers = new ArrayList<Teacher>();		
 	@Override
-	public void Insertar() {
+	public void insertar() {
 		// TODO Auto-generated method stub
 		
 			Teacher teacher1 = new Teacher("Juan Perez",1, "full", 10, 0);
@@ -51,7 +51,7 @@ public class InsertTeachers implements University{
 			
 		}		
 	@Override
-	public int Size(){
+	public int sizes(){
 		int id=teachers.size();
 		return id;
 	}
